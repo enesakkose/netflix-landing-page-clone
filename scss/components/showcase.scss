@@ -1,0 +1,210 @@
+.showcase{
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/5c235903-02cc-4228-85a2-5fcef1e47627/64b51a11-7322-496c-aab1-411ddf583abd/TR-en-20211227-popsignuptwoweeks-perspective_alpha_website_medium.jpg') no-repeat center center/cover;
+    border-bottom: 8px solid #222;
+
+    &::after{
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: linear-gradient(to top,rgba(0,0,0,.9) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.9) 100%);
+        position: absolute;
+        
+    }
+
+    nav{
+        
+        position: absolute;
+        z-index: 2;
+        position: relative;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 56px 0;
+        a{
+            img{
+                width: 134px;
+                height: 36px;
+                position: absolute;
+            }
+        }
+        .user-login{
+            position: absolute;
+            right: 0;
+            margin-right: 56px;
+
+            .sign-in{
+                background: var(--primary-color);
+                color: #fff;
+                border-radius: 3px;
+                font-size: 16px;
+                margin-left: 32px;
+            }
+            .lng{
+                position: relative;
+                select{
+                    padding: 7px 17px;
+                    border-radius: 3px;
+                    background: transparent;
+                    color: #fff;
+                    font-size: 16px;
+                    position: relative;
+
+                    option{
+                        background: rgb(160, 160, 160);
+                        border: none;
+                        
+                    }
+
+                   
+                }
+                 &::before{
+                        content:'O';
+                        font-size: .75rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: .5rem;
+                        position: absolute;
+                    }
+                    &::after{
+                        content:'O';
+                        font-size: .75rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 1.5rem;
+                        position: absolute;
+                    }
+            }
+        }
+    }
+    .cvc{
+        position: absolute;
+        z-index: 2;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 100%;
+        h1{
+            max-width: 650px;
+            font-size: 3.125rem;
+            margin: 0 auto;
+        }
+        h2{
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 1rem auto;
+            max-width: 640px;
+           
+        }
+        h3{
+            font-weight: 400;
+            padding-top: .85rem;
+            margin-bottom: 20px;
+        }
+        input{
+            min-width: 450px;
+            height: 60px;
+            padding: 10px 0px 10px 10px;
+            outline: none;
+            border-radius: 3px;
+            border: none;
+            &::placeholder{
+                color: #8c8c8c;
+                font-size: 16px;
+                transition: transform .5s ease-in-out;
+            }
+
+            
+        }
+        .mail-btn{
+            height: 60px;
+            padding: 0 1em;
+            background: var(--primary-color);
+            color: #fff;
+            font-size: 1.625rem;
+            cursor: pointer;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+        .mail{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media(max-width:768px){
+        .mail{
+            padding: 0 5%;
+            display: flex;
+            flex-direction: column;
+
+            input{
+                min-width: 0;
+                width: 100%;
+                margin: 10px 0 10px;
+            }
+
+            .mail-btn{
+                font-size: 16px;
+                padding: 0 1rem;
+                height: 40px;
+            }
+        }
+        .showcase-card{
+            padding: 50px 5%;
+            h1{
+                font-size: 1.625rem;
+            }
+            h2{
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    @media (max-width:767px){
+        nav{
+            padding: 0;
+            padding-top: 30px;
+            margin: 0 5%;
+            display: flex;
+            align-items: center;
+            .user-login{
+                margin-right: 0;
+                margin-top: 30px;
+                .lng{
+                    select{
+                        padding: 4px 8px;
+                    }
+                }
+                .sign-in{
+                    margin-left: 0;
+                    padding: 4px 8px;
+                    margin-left: 5px;
+                }
+            }
+
+            a{
+                img{
+                    width: 89px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+}
+
+
+input:focus::placeholder{
+transform: translateY(-16px);
+}
+
+//the showcase area is finished.check your resoponsive side 

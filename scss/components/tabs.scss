@@ -1,0 +1,40 @@
+.tabs{
+    background: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+    
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        div{
+            padding: 1.5rem;
+
+            &:hover{
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+
+    p{
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+    }
+
+    .tab-border{
+        border-bottom: 4px solid var(--primary-color);
+    }
+
+    @media(max-width:960px){
+        .hide-sm{
+            display: none;
+        }
+    }
+
+    
+}
