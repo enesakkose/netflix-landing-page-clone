@@ -63,26 +63,13 @@
 
                    
                 }
-                 &::before{
-                        content:'O';
-                        font-size: .75rem;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: .5rem;
-                        position: absolute;
-                    }
-                    &::after{
-                        content:'O';
-                        font-size: .75rem;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 1.5rem;
-                        position: absolute;
-                    }
+                 
+                    
             }
         }
     }
     .cvc{
+        
         position: absolute;
         z-index: 2;
         top: 55%;
@@ -207,4 +194,3 @@ input:focus::placeholder{
 transform: translateY(-16px);
 }
 
-//the showcase area is finished.check your resoponsive side 

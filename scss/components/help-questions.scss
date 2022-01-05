@@ -11,7 +11,7 @@
         margin: 2em auto;
         
         li{
-            
+            outline: none;
             button{
                 
                 width: 100%;
@@ -30,10 +30,13 @@
 
             .answer{
                 background: #303030;
-                padding: 31px;
                 font-size: 24px;
                 color: #fff;
                 margin-bottom: 8px;
+                overflow:hidden;
+                transition:  .25s cubic-bezier(.5,0,.1,1);
+                opacity: 0;
+                height:0;
                 
             }
             
@@ -109,7 +112,24 @@
         
     }
 }
+.help-questions{
+    .ans{
+        .answer{
+            background: #303030;
+                padding: 31px;
+                font-size: 24px;
+                color: #fff;
+                margin-bottom: 8px;
+                opacity: 1;
+                height: auto;
+                
+        }
 
+        i{
+            transform: rotate(45deg);
+        }
+    }
+}
 
 
 
@@ -119,9 +139,5 @@
        transform: rotate(45deg);
        
     }
-    
-}
-.closed{
-    display: none;
     
 }
